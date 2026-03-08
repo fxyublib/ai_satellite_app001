@@ -1,0 +1,82 @@
+:root {
+  --bg: #8388de;
+  --bg-dark: #5f63c7;
+  --text: #f3f4ff;
+  --accent: #ff1a1a;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 0%, #b3b7f7 0, #8388de 35%, #666ac7 100%);
+}
+
+.topbar {
+  background: linear-gradient(#2e36cc, #11188c);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+.brand { font-size: 28px; letter-spacing: 1px; }
+.status { font-size: 14px; align-self: center; }
+
+.shell { width: min(96vw, 1550px); margin: 0 auto; }
+.alert {
+  background: #fff;
+  color: #111;
+  margin-top: 10px;
+  padding: 12px;
+  text-align: center;
+  font-size: 34px;
+  font-size: clamp(20px, 1.6vw, 34px);
+  font-weight: 700;
+}
+.alert a { color: #d00; }
+
+.telemetry {
+  background: rgba(90, 96, 192, .95);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 6px 18px;
+  font-size: 20px;
+}
+.telemetry div { display: flex; gap: 8px; }
+.telemetry .k { color: #f5f6ff; opacity: .85; }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 4px;
+  margin-top: 4px;
+}
+.panel {
+  border: 3px solid #3f45b2;
+  background: #878be0;
+  min-height: 660px;
+}
+.panel-title {
+  background: #6f73d8;
+  color: #dce0ff;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.viewer { width: 100%; height: 620px; }
+
+.footer {
+  background: #5f63c7;
+  text-align: center;
+  padding: 8px;
+  font-size: 32px;
+  font-size: clamp(20px, 1.5vw, 32px);
+  font-weight: 700;
+}
+
+.cesium-viewer-toolbar,
+.cesium-viewer-animationContainer,
+.cesium-viewer-timelineContainer,
+.cesium-viewer-bottom { display: none !important; }

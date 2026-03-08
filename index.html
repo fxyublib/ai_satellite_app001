@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAT-Flare 风格 Cesium 卫星可视化</title>
+  <link href="https://unpkg.com/cesium@1.114.0/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">SATFARE</div>
+    <div class="status">35894 Registered Users ｜ Chat 💬 ｜ Join the obs net</div>
+  </header>
+
+  <main class="shell">
+    <section class="alert">New 我们的数据库里有该目标观测报告（FPAS）. <a href="#">See Reports</a></section>
+
+    <section class="telemetry" id="telemetry">
+      <div><span class="k">TIME (UTC)</span><span id="timeUtc">--</span></div>
+      <div><span class="k">Latitude [deg]</span><span id="lat">--</span></div>
+      <div><span class="k">Altitude [km]</span><span id="alt">--</span></div>
+      <div><span class="k">Sun El.[deg]</span><span id="sunEl">-5.4 (Twilight)</span></div>
+      <div><span class="k">Longitude [deg]</span><span id="lon">--</span></div>
+      <div><span class="k">Azimuth [deg]</span><span id="az">149</span></div>
+      <div><span class="k">Elevation [deg]</span><span id="el">-50.9</span></div>
+      <div><span class="k">Observer</span><span>(registered) 35894</span></div>
+    </section>
+
+    <section class="content-grid">
+      <div class="panel">
+        <div class="panel-title">2D Ground Track</div>
+        <div id="viewer2d" class="viewer"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">3D Orbital View</div>
+        <div id="viewer3d" class="viewer"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Visual SAT-Flare Tracker 3D - Online - Cesium Demo</footer>
+
+  <script src="https://unpkg.com/cesium@1.114.0/Build/Cesium/Cesium.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
